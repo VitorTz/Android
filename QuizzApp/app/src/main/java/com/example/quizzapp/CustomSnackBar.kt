@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 
 
-class CustomSnackBar() {
+object CustomSnackBar {
 
 
     fun show(context: AppCompatActivity, view: View, message: String) {
@@ -15,4 +15,5 @@ class CustomSnackBar() {
         s.setTextColor(context.resources.getColor(R.color.pink, context.theme))
         s.show()
     }
+
 }

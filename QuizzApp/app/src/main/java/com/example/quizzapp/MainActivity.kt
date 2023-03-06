@@ -10,14 +10,12 @@ import com.example.quizzapp.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private lateinit var customSnackBar: CustomSnackBar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         this.binding = ActivityMainBinding.inflate(this.layoutInflater)
         setContentView(this.binding.root)
         this.supportActionBar?.hide()
-        this.customSnackBar = CustomSnackBar()
     }
 
     private fun getUserName(): String {
@@ -26,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun checkUsername(): Boolean {
         if (this.getUserName().isEmpty()) {
-            this.customSnackBar.show(
+            CustomSnackBar.show(
                 this,
                 this.binding.root,
                 this.resources.getString(R.string.usernameEmptyError)
