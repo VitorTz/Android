@@ -4,6 +4,7 @@ class QuestionList {
 
     fun reset() {
         Globals.currentQuestionIndex = 0
+        Globals.answeredQuestions = 0
         Constants.questions.forEach {
             it.answered = false
             it.userAnswer = null

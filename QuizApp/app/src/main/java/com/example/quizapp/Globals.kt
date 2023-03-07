@@ -8,11 +8,6 @@ object Globals {
     }
 
     var username: String = ""
-
-    fun countCorrectAnswers(): Int {
-        return Constants.questions.count {
-            it.userAnswer != null && it.userAnswer == it.correctAnswer
-        }
-    }
+    var answeredQuestions: Int = 0
 
 }

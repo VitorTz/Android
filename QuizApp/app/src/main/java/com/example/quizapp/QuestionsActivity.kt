@@ -72,7 +72,7 @@ class QuestionsActivity : AppCompatActivity() {
 
     private fun showCurrentQuestion() {
         val q: Question = this.questionList.getCurrentQuestion()
-        this.binding.flagImg.setBackgroundResource(q.image)
+        this.binding.flagImg.setImageResource(q.image)
         this.binding.answer1.text = "1) ".plus(q.answer1)
         this.binding.answer2.text = "2) ".plus(q.answer2)
         this.binding.answer3.text = "3) ".plus(q.answer3)
@@ -83,6 +83,8 @@ class QuestionsActivity : AppCompatActivity() {
         this.questionList.reset()
         this.showCurrentQuestion()
         this.resetButtonsBackground()
+        this.binding.progressBar.max = Constants.questions.size
+        this.binding.progressBar.setProgress(0, false)
     }
 
     private fun showAnswer() {
@@ -95,12 +97,18 @@ class QuestionsActivity : AppCompatActivity() {
         }
     }
 
+    private fun updateProgressBar() {
+        this.binding.progressBar.setProgress(Globals.answeredQuestions, true)
+    }
+
     private fun markAnswer(view: View, answer: Int) {
         val q: Question = this.questionList.getCurrentQuestion()
         if (!q.answered) {
             q.answered = true
             q.userAnswer = answer
+            Globals.answeredQuestions += 1
             this.showAnswer()
+            this.updateProgressBar()
         } else
             CustomSnackBar.show(this, view, this.resources.getString(R.string.aleradyAnswered))
     }

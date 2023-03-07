@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/tangerine"
+    android:background="@color/dark_grey"
     android:paddingHorizontal="10dp"
     android:gravity="center"
     tools:context=".QuestionsActivity">
@@ -23,13 +23,13 @@
             android:padding="20dp"
             android:layout_margin="10dp"
             android:background="@drawable/rounded"
-            android:backgroundTint="@color/melon"
+            android:backgroundTint="@color/grey"
             >
             <ImageView
                 android:id="@+id/flagImg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:background="@drawable/ic_flag_of_argentina"
+                tools:src="@drawable/ic_flag_of_argentina"
                 android:contentDescription="@string/descricao_bandeira"
                 android:layout_marginBottom="10dp"/>
 
@@ -37,7 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/question"
-                android:textColor="@color/grey_200"
+                android:textColor="@color/white"
                 android:gravity="center"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -58,7 +58,8 @@
                     android:textAllCaps="false"
                     android:background="@drawable/answer"
                     android:paddingVertical="15dp"
-                    android:textColor="@color/grey_200"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
                     android:textAlignment="center"
                     android:layout_marginVertical="2.5dp"
                     />
@@ -70,7 +71,8 @@
                     android:textAllCaps="false"
                     android:background="@drawable/answer"
                     android:paddingVertical="15dp"
-                    android:textColor="@color/grey_200"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
                     android:textAlignment="center"
                     android:layout_marginVertical="2.5dp"
                     />
@@ -82,7 +84,8 @@
                     android:textAllCaps="false"
                     android:background="@drawable/answer"
                     android:paddingVertical="15dp"
-                    android:textColor="@color/grey_200"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
                     android:textAlignment="center"
                     android:layout_marginVertical="2.5dp"
                     />
@@ -94,11 +97,43 @@
                     android:textAllCaps="false"
                     android:background="@drawable/answer"
                     android:paddingVertical="15dp"
-                    android:textColor="@color/grey_200"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
                     android:textAlignment="center"
                     android:layout_marginVertical="2.5dp"
                     />
 
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/answer"
+                android:layout_marginVertical="5dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="8dp">
+                <ProgressBar
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:id="@+id/progressBar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:max="10"
+                    tools:progress="2"
+                    android:progressTint="@color/white"
+                    android:indeterminate="false"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    tools:text="1/10"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp"
+                    />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -110,7 +145,7 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded"
-                    android:backgroundTint="@color/tangerine"
+                    android:backgroundTint="@color/dark_grey"
                     android:layout_gravity="start"
                     android:layout_marginEnd="5dp"
                     android:padding="5dp"
@@ -120,10 +155,10 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="@color/melon"
+                        android:backgroundTint="@color/grey"
                         android:layout_marginEnd="5dp"
                         app:icon="@drawable/arrow_left"
-                        app:iconTint="@color/grey_100"
+                        app:iconTint="@color/white"
                         app:iconGravity="textStart"
                         />
 
@@ -132,10 +167,10 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="@color/melon"
+                        android:backgroundTint="@color/grey"
                         android:layout_marginEnd="5dp"
                         app:icon="@drawable/arrow_right"
-                        app:iconTint="@color/grey_100"
+                        app:iconTint="@color/white"
                         app:iconGravity="textStart"
                         />
 
@@ -146,7 +181,7 @@
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded"
-                    android:backgroundTint="@color/tangerine"
+                    android:backgroundTint="@color/dark_grey"
                     android:layout_marginStart="5dp"
                     android:layout_gravity="start"
                     android:padding="5dp"
@@ -156,10 +191,10 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="@color/melon"
+                        android:backgroundTint="@color/grey"
                         android:layout_marginEnd="5dp"
                         app:icon="@drawable/reset_24"
-                        app:iconTint="@color/grey_100"
+                        app:iconTint="@color/white"
                         app:iconGravity="textStart"
                         />
 
@@ -168,10 +203,10 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:backgroundTint="@color/melon"
+                        android:backgroundTint="@color/grey"
                         android:layout_marginEnd="5dp"
                         app:icon="@drawable/check"
-                        app:iconTint="@color/grey_100"
+                        app:iconTint="@color/white"
                         app:iconGravity="textStart"
                         />
 

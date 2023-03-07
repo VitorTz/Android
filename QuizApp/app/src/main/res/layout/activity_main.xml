@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/tangerine"
+    android:background="@color/dark_grey"
     android:gravity="center"
     tools:context=".MainActivity">
 
@@ -19,7 +19,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/melon"
+            android:background="@color/grey"
             android:orientation="vertical"
             android:padding="10dp"
             >
@@ -31,7 +31,7 @@
             android:gravity="center"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:textColor="@color/grey_100"/>
+            android:textColor="@color/white"/>
 
 
             <com.google.android.material.textfield.TextInputLayout
@@ -39,9 +39,9 @@
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColorHint="@color/grey_100"
+                android:textColorHint="@color/white"
                 app:hintEnabled="true"
-                app:boxStrokeColor="@color/grey_100"
+                app:boxStrokeColor="@color/dark_grey"
                 >
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/usernameInput"
@@ -49,9 +49,9 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/hint_username"
                     android:inputType="textCapWords"
-                    android:textColorHint="@color/grey_100"
+                    android:textColorHint="@color/white"
                     android:textStyle="bold"
-                    android:textColor="@color/grey_100"
+                    android:textColor="@color/white"
                     android:maxLines="1"
                     />
 
@@ -60,10 +60,10 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/tangerine"
+                android:backgroundTint="@color/dark_grey"
                 android:onClick="startQuiz"
                 android:text="@string/start"
-                android:textColor="@color/grey_100"
+                android:textColor="@color/white"
                 android:textStyle="bold"
                 />
         </LinearLayout>

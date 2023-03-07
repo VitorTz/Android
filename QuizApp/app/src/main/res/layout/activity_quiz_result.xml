@@ -8,7 +8,7 @@
     android:gravity="top"
     android:paddingVertical="40dp"
     tools:context=".QuizResultActivity"
-    android:background="@color/tangerine">
+    android:background="@color/dark_grey">
 
     <TextView
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
         android:text="@string/result"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="@color/grey_200"
+        android:textColor="@color/white"
         android:gravity="center"
         />
 
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:text="@string/hey_congratulations"
             android:gravity="center"
-            android:textColor="@color/grey_200"
+            android:textColor="@color/white"
             android:layout_marginVertical="20dp"
             android:textSize="18sp"
             android:textStyle="bold"/>
@@ -48,7 +48,7 @@
             tools:text="username"
             android:gravity="center"
             android:textSize="18sp"
-            android:textColor="@color/grey_200"
+            android:textColor="@color/white"
             android:layout_marginBottom="10dp"
             />
         <TextView
@@ -58,7 +58,7 @@
             tools:text="Your score is"
             android:gravity="center"
             android:textSize="20sp"
-            android:textColor="@color/grey_200"
+            android:textColor="@color/white"
             android:layout_marginBottom="20dp"
             />
 
@@ -68,8 +68,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/finish"
-            android:textColor="@color/grey_200"
-            android:backgroundTint="@color/melon"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/grey"
             />
     </LinearLayout>
 
