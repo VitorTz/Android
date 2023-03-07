@@ -7,7 +7,5 @@ object Globals {
         field = Math.floorMod(value, Constants.questions.size)
     }
 
-    var username: String = ""
     var answeredQuestions: Int = 0
-
 }

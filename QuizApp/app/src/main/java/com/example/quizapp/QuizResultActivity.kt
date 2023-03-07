@@ -20,15 +20,12 @@ class QuizResultActivity : AppCompatActivity() {
     }
 
     private fun showResult() {
-        this.binding.username.text = Globals.username
-        val correctAnswers: Int = this.countCorrectAnswers()
-        val questionsSize: Int = Constants.questions.size
+        this.binding.username.text = this.intent.getStringExtra(Constants.USERNAME)
+        val correctAnswers: Int = this.intent.getIntExtra(Constants.CORRECT_ANSWERS, 0)
+        val questionsSize: Int = this.intent.getIntExtra(Constants.TOTAL_QUESTIONS, 0)
         val resultString = "Your score is $correctAnswers of $questionsSize"
         this.binding.userScore.text = resultString
     }
 
-    private fun countCorrectAnswers(): Int {
-        return Constants.questions.count { it.answered && it.correctAnswer == it.userAnswer }
-    }
 
 }

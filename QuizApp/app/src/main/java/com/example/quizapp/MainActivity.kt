@@ -16,19 +16,15 @@ class MainActivity : AppCompatActivity() {
         this.binding = ActivityMainBinding.inflate(this.layoutInflater)
         setContentView(this.binding.root)
         this.supportActionBar?.hide()
-        this.reset()
-    }
-
-    private fun reset() {
-        Globals.username = ""
     }
 
     fun startQuiz(view: View) {
         val username: String = this.binding.usernameInput.text.toString()
-        if (this.binding.usernameInput.text?.isEmpty() == true)
+        if (username.isEmpty())
             return CustomSnackBar.show(this, view, this.resources.getString(R.string.invalid_username))
-        Globals.username = username
+
         val intent = Intent(this, QuestionsActivity::class.java)
+        intent.putExtra(Constants.USERNAME, username)
         this.startActivity(intent)
         this.binding.usernameInput.setText("")
     }

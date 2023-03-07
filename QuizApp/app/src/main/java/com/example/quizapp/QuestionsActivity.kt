@@ -58,11 +58,14 @@ class QuestionsActivity : AppCompatActivity() {
             this.reset()
         }
 
-        this.binding.checkBtn.setOnClickListener {
+        this.binding.checkBtn.setOnClickListener { it ->
             if (!this.questionList.isAllQuestionsAnswered())
                 CustomSnackBar.show(this, it, this.resources.getString(R.string.unansweredQuestions))
             else {
                 val intent = Intent(this, QuizResultActivity::class.java)
+                intent.putExtra(Constants.USERNAME, this.intent.getStringExtra(Constants.USERNAME))
+                intent.putExtra(Constants.TOTAL_QUESTIONS, Constants.questions.size)
+                intent.putExtra(Constants.CORRECT_ANSWERS, Constants.questions.count { q -> q.correctAnswer == q.userAnswer })
                 this.startActivity(intent)
                 this.finish()
             }
