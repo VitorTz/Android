@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">Quiz App!</string>
-    <string name="welcome">Welcome</string>
-    <string name="message_enter_name">please enter your name</string>
-    <string name="username">username</string>
-    <string name="start">Start</string>
-    <string name="usernameEmptyError">Digite seu nome, por favor.</string>
-    <string name="biologia">Biologia</string>
-</resources>

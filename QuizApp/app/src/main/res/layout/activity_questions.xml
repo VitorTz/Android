@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/tangerine"
+    android:paddingHorizontal="10dp"
+    android:gravity="center"
+    tools:context=".QuestionsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="20dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded"
+            android:backgroundTint="@color/melon"
+            >
+            <ImageView
+                android:id="@+id/flagImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:background="@drawable/ic_flag_of_argentina"
+                android:contentDescription="@string/descricao_bandeira"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/question"
+                android:textColor="@color/grey_200"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                <TextView
+                    android:id="@+id/answer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="1) Paraguai"
+                    android:textAllCaps="false"
+                    android:background="@drawable/answer"
+                    android:paddingVertical="15dp"
+                    android:textColor="@color/grey_200"
+                    android:textAlignment="center"
+                    android:layout_marginVertical="2.5dp"
+                    />
+                <TextView
+                    android:id="@+id/answer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="2) Chile"
+                    android:textAllCaps="false"
+                    android:background="@drawable/answer"
+                    android:paddingVertical="15dp"
+                    android:textColor="@color/grey_200"
+                    android:textAlignment="center"
+                    android:layout_marginVertical="2.5dp"
+                    />
+                <TextView
+                    android:id="@+id/answer3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="3) Argentina"
+                    android:textAllCaps="false"
+                    android:background="@drawable/answer"
+                    android:paddingVertical="15dp"
+                    android:textColor="@color/grey_200"
+                    android:textAlignment="center"
+                    android:layout_marginVertical="2.5dp"
+                    />
+                <TextView
+                    android:id="@+id/answer4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="4) Colombia"
+                    android:textAllCaps="false"
+                    android:background="@drawable/answer"
+                    android:paddingVertical="15dp"
+                    android:textColor="@color/grey_200"
+                    android:textAlignment="center"
+                    android:layout_marginVertical="2.5dp"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="5dp"
+                >
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded"
+                    android:backgroundTint="@color/tangerine"
+                    android:layout_gravity="start"
+                    android:layout_marginEnd="5dp"
+                    android:padding="5dp"
+                    >
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/prevBtn"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/melon"
+                        android:layout_marginEnd="5dp"
+                        app:icon="@drawable/arrow_left"
+                        app:iconTint="@color/grey_100"
+                        app:iconGravity="textStart"
+                        />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/nextBtn"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/melon"
+                        android:layout_marginEnd="5dp"
+                        app:icon="@drawable/arrow_right"
+                        app:iconTint="@color/grey_100"
+                        app:iconGravity="textStart"
+                        />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded"
+                    android:backgroundTint="@color/tangerine"
+                    android:layout_marginStart="5dp"
+                    android:layout_gravity="start"
+                    android:padding="5dp"
+                    >
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/resetBtn"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/melon"
+                        android:layout_marginEnd="5dp"
+                        app:icon="@drawable/reset_24"
+                        app:iconTint="@color/grey_100"
+                        app:iconGravity="textStart"
+                        />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/checkBtn"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/melon"
+                        android:layout_marginEnd="5dp"
+                        app:icon="@drawable/check"
+                        app:iconTint="@color/grey_100"
+                        app:iconGravity="textStart"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

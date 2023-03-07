@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="hint_username">username</string>
+    <string name="start">Start</string>
+    <string name="invalid_username">Invalid username!</string>
+    <string name="descricao_bandeira">Bandeira de um país</string>
+    <string name="question">A qual país pertence esta bandeira?</string>
+    <string name="unansweredQuestions">Responda todas as perguntas primeiro!</string>
+    <string name="aleradyAnswered">Pergunta já respondida!</string>
+    <string name="allQuestionsAnswered">Você já respondeu todas as perguntas!</string>
+    <string name="perguntaRespondida">Pergunta respondida!</string>
+    <string name="result">Result</string>
+    <string name="hey_congratulations">Hey, congratulations!</string>
+    <string name="finish">finish</string>
+</resources>
