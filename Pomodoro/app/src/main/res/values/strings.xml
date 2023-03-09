@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Pomodoro</string>
+    <string name="pomodoro">Pomodoro</string>
+    <string name="short_break">Short Break</string>
+    <string name="long_break">Long Break</string>
+    <string name="settings">Settings</string>
+    <string name="focus_length">Focus Length</string>
+    <string name="pomodoros_until_break">Pomodoros until break</string>
+</resources>
